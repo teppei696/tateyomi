@@ -7,6 +7,7 @@ $point1 = $_GET['point1'];
 $point2 = $_GET['point2'];
 $point3 = $_GET['point3'];
 $point4 = $_GET['point4'];
+$thickness = $_GET['thickness'];
 $y1 = $_GET['y1'];
 $text1 = $_GET['text1'];
 $y2 = $_GET['y2'];
@@ -35,20 +36,21 @@ $text = mb_convert_encoding($text, 'UTF-8', 'auto');
 
 # 黒い文字を書き込む
 $black = imagecolorallocate($img, 0, 0, 0);
-imagettftext($img, $size, 0, $x, $y1, $black,'ipagp.ttf', $text1);
-imagettftext($img, $size, 0, $x, $y2, $black,'ipagp.ttf', $text2);
-imagettftext($img, $size, 0, $x, $y3, $black,'ipagp.ttf', $text3);
-imagettftext($img, $size, 0, $x, $y4, $black,'ipagp.ttf', $text4);
-imagettftext($img, $size, 0, $x, $y5, $black,'ipagp.ttf', $text5);
-imagettftext($img, $size, 0, $x, $y6, $black,'ipagp.ttf', $text6);
-imagettftext($img, $size, 0, $x, $y7, $black,'ipagp.ttf', $text7);
-imagettftext($img, $size, 0, $x, $y8, $black,'ipagp.ttf', $text8);
-imagettftext($img, $size, 0, $x, $y9, $black,'ipagp.ttf', $text9);
-imagettftext($img, $size, 0, $x, $y10, $black,'ipagp.ttf', $text10);
+imagettftext($img, $size, 0, $x, $y1, $black,'ヒラギノ明朝 ProN W6.ttc', $text1);
+imagettftext($img, $size, 0, $x, $y2, $black,'ヒラギノ明朝 ProN W6.ttc', $text2);
+imagettftext($img, $size, 0, $x, $y3, $black,'ヒラギノ明朝 ProN W6.ttc', $text3);
+imagettftext($img, $size, 0, $x, $y4, $black,'ヒラギノ明朝 ProN W6.ttc', $text4);
+imagettftext($img, $size, 0, $x, $y5, $black,'ヒラギノ明朝 ProN W6.ttc', $text5);
+imagettftext($img, $size, 0, $x, $y6, $black,'ヒラギノ明朝 ProN W6.ttc', $text6);
+imagettftext($img, $size, 0, $x, $y7, $black,'ヒラギノ明朝 ProN W6.ttc', $text7);
+imagettftext($img, $size, 0, $x, $y8, $black,'ヒラギノ明朝 ProN W6.ttc', $text8);
+imagettftext($img, $size, 0, $x, $y9, $black,'ヒラギノ明朝 ProN W6.ttc', $text9);
+imagettftext($img, $size, 0, $x, $y10, $black,'ヒラギノ明朝 ProN W6.ttc', $text10);
 
 # 赤い四角を描画
 // 四角形の線の色を指定（ここでは赤色）
 $red = imagecolorallocate($img, 255, 0, 0);
+imagesetthickness($im, $thickness);
 // 画像リソースに四角形を描画
 imagerectangle($img,$point1,$point2,$point3,$point4,$red);
 
