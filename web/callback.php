@@ -29,10 +29,8 @@ if ($text == '天気を教えて？') {
 	$url7 = "&text6=" . urlencode("文字列を書き込みます１。");
 	$url8 = "&text7=" . urlencode("文字列を書き込みます１。");
 	$url9 = "&text8=" . urlencode("文字列を書き込みます１。");
-	$url10 = "&text9=" . urlencode("文字列を書き込みます１。");
-	$url11 = "&text10=" . urlencode("文字列を書き込みます１。");
 
-	$image = $url1 . $url2 . $url3 . $url4 . $url5 . $url6 . $url7 . $url8 . $url9 . $url10 . $url11;
+	$image = $url1 . $url2 . $url3 . $url4 . $url5 . $url6 . $url7 . $url8 . $url9;
   $response_format_text = [
     "type" => "image",
     "originalContentUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image,
