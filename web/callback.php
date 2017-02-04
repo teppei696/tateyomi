@@ -20,7 +20,20 @@ if($type != "text"){
 //返信データ作成
 if ($text == '天気を教えて？') {
 	// 画像情報
-	$image = "image.php?size=24&x=24&y=100&image=bg_640_520_1.jpg&text=%E6%96%87%E5%AD%97%E5%88%97%E3%82%92%E6%9B%B8%E3%81%8D%E8%BE%BC%E3%81%BF%E3%81%BE%E3%81%99%E3%80%82&point1=25&point2=55&point3=60&point4=300";
+	$url1 = "image.php?image=bg_640_520_1.jpg&size=22&point1=21&point2=110&point3=57&point4=350";
+	$url2 = "&thickness=3&x=24&y1=100&y2=140&y3=180&y4=220&y5=260&y6=300&y7=340&y8=380&y9=420&y10=460";
+	$url3 = "&text1=" . urlencode("文字列を書き込みます１。");
+	$url4 = "&text2=" . urlencode("文字列を書き込みます１。");
+	$url5 = "&text3=" . urlencode("文字列を書き込みます１。");
+	$url6 = "&text4=" . urlencode("文字列を書き込みます１。");
+	$url7 = "&text5=" . urlencode("文字列を書き込みます１。");
+	$url8 = "&text6=" . urlencode("文字列を書き込みます１。");
+	$url9 = "&text7=" . urlencode("文字列を書き込みます１。");
+	$url10 = "&text8=" . urlencode("文字列を書き込みます１。");
+	$url11 = "&text9=" . urlencode("文字列を書き込みます１。");
+	$url12 = "&text10=" . urlencode("文字列を書き込みます１。");
+
+	$image = $param . ;
   $response_format_text = [
     "type" => "image",
     "originalContentUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image,
