@@ -1,25 +1,27 @@
 <?php
 $accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
 
-error_log("log01¥r¥n");
+error_log("LINE_CHANNEL_ACCESS_TOKEN: " + $accessToken + "¥r¥n");
 //ユーザーからのメッセージ取得
 $json_string = file_get_contents('php://input');
 $jsonObj = json_decode($json_string);
+error_log("jsonObj: " + $jsonObj + "¥r¥n");
 
-error_log("log02¥r¥n");
 $type = $jsonObj->{"events"}[0]->{"message"}->{"type"};
+error_log("type: " + $type + "¥r¥n");
 //メッセージ取得
 $text = $jsonObj->{"events"}[0]->{"message"}->{"text"};
+error_log("text: " + $text + "¥r¥n");
 //ReplyToken取得
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
+error_log("replyToken: " + $replyToken + "¥r¥n");
 
-error_log("log03¥r¥n");
 //メッセージ以外のときは何も返さず終了
 if($type != "text"){
 	exit;
 }
 
-error_log("log04¥r¥n");
+
 //返信データ作成
 if ($text == 'はい') {
   $response_format_text = [
@@ -170,4 +172,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Authorization: Bearer ' . $accessToken
     ));
 $result = curl_exec($ch);
+error_log("result: " + $result + "¥r¥n");
+
+
 curl_close($ch);
