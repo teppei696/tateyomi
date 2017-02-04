@@ -23,6 +23,10 @@ $y7 = $_GET['y7'];
 $text7 = $_GET['text7'];
 $y8 = $_GET['y8'];
 $text8 = $_GET['text8'];
+$y9 = $_GET['y9'];
+$text9 = $_GET['text9'];
+$y10 = $_GET['y10'];
+$text10 = $_GET['text10'];
 
 $img = imagecreatefromjpeg($image);
 
