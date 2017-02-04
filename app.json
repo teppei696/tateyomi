@@ -1,19 +1,12 @@
 {
-  "name": "tateyomi-line",
-  "description": "tateyomi-line",
-  "repository": "https://github.com/ttskch/line-nullpo.git",
-  "logo": "https://slack.global.ssl.fastly.net/f30f/img/services/api_200.png",
-  "keywords": ["tateyomi", "LINE"],
-  "addons": ["fixie:tricycle"],
-  "env": {
-    "LINE_CHANNEL_ID": {
-      "description": "LINE Channel ID"
-    },
-    "LINE_CHANNEL_SECRET": {
-      "description": "LINE Channel Secret"
-    },
-    "LINE_CHANNEL_MID": {
-      "description": "LINE Channel MID"
+    "name": "#LINE Messaging API test PHP",
+    "description": "heroku 上にデプロイされる LINE Messaging APIのサーバースクリプト",
+    "repository": "https://github.com/hrmz/line-messagingapi-test.git",
+    "logo": "https://bita.jp/dml/wp-content/uploads/2016/04/dijimalab_logo.png",
+    "keywords": ["php", "line-messaging-api"],
+    "env": {
+      "LINE_CHANNEL_ACCESS_TOKEN": {
+        "description": "Channel Access Token (LINE developers の Basic information で確認できます)"
+      }
     }
-  }
 }

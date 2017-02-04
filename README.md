@@ -1,4 +1,6 @@
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+#LINE Messaging APIで追加になったメッセージタイプを試してみるスクリプトです。
 
-LINE BOT AWARD用のアプリです。
-Yahooニュースを元に縦書きで天気を答えます。
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+* heroku上にデプロイされます。
+* Procfileでドキュメントルートを指定しています。ドキュメントルートは`/web`です。
