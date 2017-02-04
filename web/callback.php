@@ -162,6 +162,9 @@ curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post_data));
+// Heroku Addon の Fixie のプロキシURLを指定。詳細は後述。
+curl_setopt($curl, CURLOPT_HTTPPROXYTUNNEL, 1);
+curl_setopt($curl, CURLOPT_PROXY, getenv('FIXIE_URL'));
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Content-Type: application/json; charser=UTF-8',
     'Authorization: Bearer ' . $accessToken
