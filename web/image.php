@@ -36,16 +36,16 @@ $text = mb_convert_encoding($text, 'UTF-8', 'auto');
 
 # 黒い文字を書き込む
 $black = imagecolorallocate($img, 0, 0, 0);
-imagettftext($img, $size, 0, $x, $y1, $black,'ヒラギノ明朝 ProN W6.ttc', $text1);
-imagettftext($img, $size, 0, $x, $y2, $black,'ヒラギノ明朝 ProN W6.ttc', $text2);
-imagettftext($img, $size, 0, $x, $y3, $black,'ヒラギノ明朝 ProN W6.ttc', $text3);
-imagettftext($img, $size, 0, $x, $y4, $black,'ヒラギノ明朝 ProN W6.ttc', $text4);
-imagettftext($img, $size, 0, $x, $y5, $black,'ヒラギノ明朝 ProN W6.ttc', $text5);
-imagettftext($img, $size, 0, $x, $y6, $black,'ヒラギノ明朝 ProN W6.ttc', $text6);
-imagettftext($img, $size, 0, $x, $y7, $black,'ヒラギノ明朝 ProN W6.ttc', $text7);
-imagettftext($img, $size, 0, $x, $y8, $black,'ヒラギノ明朝 ProN W6.ttc', $text8);
-imagettftext($img, $size, 0, $x, $y9, $black,'ヒラギノ明朝 ProN W6.ttc', $text9);
-imagettftext($img, $size, 0, $x, $y10, $black,'ヒラギノ明朝 ProN W6.ttc', $text10);
+imagettftext($img, $size, 0, $x, $y1, $black,'font1.ttc', $text1);
+imagettftext($img, $size, 0, $x, $y2, $black,'font1.ttc', $text2);
+imagettftext($img, $size, 0, $x, $y3, $black,'font1.ttc', $text3);
+imagettftext($img, $size, 0, $x, $y4, $black,'font1.ttc', $text4);
+imagettftext($img, $size, 0, $x, $y5, $black,'font1.ttc', $text5);
+imagettftext($img, $size, 0, $x, $y6, $black,'font1.ttc', $text6);
+imagettftext($img, $size, 0, $x, $y7, $black,'font1.ttc', $text7);
+imagettftext($img, $size, 0, $x, $y8, $black,'font1.ttc', $text8);
+imagettftext($img, $size, 0, $x, $y9, $black,'font1.ttc', $text9);
+imagettftext($img, $size, 0, $x, $y10, $black,'font1.ttc', $text10);
 
 # 赤い四角を描画
 // 四角形の線の色を指定（ここでは赤色）
