@@ -3,11 +3,9 @@
 $size = $_GET['size'];
 $x = $_GET['x'];
 $y = $_GET['y'];
-$fontSize = $_GET['font'];
-$fontSize = $_GET['font'];
-$fontSize = $_GET['font'];
+$image = $_GET['image'];
 
-$img = imagecreatefromjpeg('tenki1.jpg');
+$img = imagecreatefromjpeg($image);
 
 # 必要に応じてUTF8へ変換(環境依存)
 $text = mb_convert_encoding('文字列を書き込む', 'UTF-8', 'auto');
