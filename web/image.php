@@ -43,6 +43,8 @@ imagettftext($img, $size, 0, $x, $y5, $black,'ipagp.ttf', $text5);
 imagettftext($img, $size, 0, $x, $y6, $black,'ipagp.ttf', $text6);
 imagettftext($img, $size, 0, $x, $y7, $black,'ipagp.ttf', $text7);
 imagettftext($img, $size, 0, $x, $y8, $black,'ipagp.ttf', $text8);
+imagettftext($img, $size, 0, $x, $y9, $black,'ipagp.ttf', $text9);
+imagettftext($img, $size, 0, $x, $y10, $black,'ipagp.ttf', $text10);
 
 # 赤い四角を描画
 // 四角形の線の色を指定（ここでは赤色）
