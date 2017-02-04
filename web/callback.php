@@ -1,8 +1,10 @@
 <?php
 $accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
+$accessToken = "YZHXIAokSgk1hwp9QddKxHkBrdNJzeQySK0jRGQLGBzKSnBJHjbJBe12VaVjd+g2JDSAoooU2xdeyolkhFQbsZ3+IcVvfFqRm4C+IGnBQ8jDh8A7ddSQXH+W/Y60qV4UWeXFCbky63uvvImWymBl9wdB04t89/1O/w1cDnyilFU=";
 
-error_log("log0¥r¥n");
-error_log("LINE_CHANNEL_ACCESS_TOKEN: " + $accessToken + "¥r¥n");
+
+error_log("log0");
+error_log("LINE_CHANNEL_ACCESS_TOKEN: " + $accessToken);
 //ユーザーからのメッセージ取得
 $json_string = file_get_contents('php://input');
 $jsonObj = json_decode($json_string);

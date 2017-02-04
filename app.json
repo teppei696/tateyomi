@@ -1,7 +1,7 @@
 {
-    "name": "#LINE Messaging API test PHP",
-    "description": "heroku 上にデプロイされる LINE Messaging APIのサーバースクリプト",
-    "repository": "https://github.com/hrmz/line-messagingapi-test.git",
+    "name": "縦読み天気予報",
+    "description": "縦読み天気予報",
+    "repository": "https://git.heroku.com/tateyomi-line.git",
     "logo": "https://bita.jp/dml/wp-content/uploads/2016/04/dijimalab_logo.png",
     "keywords": ["php", "line-messaging-api"],
     "env": {
