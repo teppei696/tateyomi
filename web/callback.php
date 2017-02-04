@@ -19,10 +19,14 @@ if($type != "text"){
 
 //返信データ作成
 if ($text == '天気を教えて？') {
+	// 画像情報
+	$image = "image.php?size=24&x=24&y=100&image=bg_640_520_1.jpg&text=%E6%96%87%E5%AD%97%E5%88%97%E3%82%92%E6%9B%B8%E3%81%8D%E8%BE%BC%E3%81%BF%E3%81%BE%E3%81%99%E3%80%82&point1=25&point2=55&point3=60&point4=300";
+
+
   $response_format_text = [
     "type" => "image",
-    "originalContentUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/tenki1.jpg",
-		"previewImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/tenki1.jpg"
+    "originalContentUrl" => "https://" . $_SERVER['SERVER_NAME'] . $image,
+		"previewImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . $image
   ];
 } else {
 	exit;
