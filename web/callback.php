@@ -33,7 +33,7 @@ if ($text == '天気を教えて？') {
 	$url11 = "&text9=" . urlencode("文字列を書き込みます１。");
 	$url12 = "&text10=" . urlencode("文字列を書き込みます１。");
 
-	$image = $param . ;
+	$image = $url1 . $url2 . $url3 . $url4 . $url5 . $url6 . $url7 . $url8 . $url9 . $url10 . $url11 . $url12;
   $response_format_text = [
     "type" => "image",
     "originalContentUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image,
