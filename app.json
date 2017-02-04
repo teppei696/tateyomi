@@ -1,9 +1,9 @@
 {
-  "name": "line-nullpo",
-  "description": "nullpo watcher for LINE",
+  "name": "tateyomi-line",
+  "description": "tateyomi-line",
   "repository": "https://github.com/ttskch/line-nullpo.git",
   "logo": "https://slack.global.ssl.fastly.net/f30f/img/services/api_200.png",
-  "keywords": ["nullpo", "LINE"],
+  "keywords": ["tateyomi", "LINE"],
   "addons": ["fixie:tricycle"],
   "env": {
     "LINE_CHANNEL_ID": {
