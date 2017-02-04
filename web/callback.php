@@ -1,10 +1,12 @@
 <?php
 $accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
 
+error_log("log0¥r¥n")
 error_log("LINE_CHANNEL_ACCESS_TOKEN: " + $accessToken + "¥r¥n");
 //ユーザーからのメッセージ取得
 $json_string = file_get_contents('php://input');
 $jsonObj = json_decode($json_string);
+error_log("log1¥r¥n")
 error_log("jsonObj: " + $jsonObj + "¥r¥n");
 
 $type = $jsonObj->{"events"}[0]->{"message"}->{"type"};
