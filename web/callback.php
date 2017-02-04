@@ -6,7 +6,6 @@ error_log("LINE_CHANNEL_ACCESS_TOKEN: " . $accessToken);
 //ユーザーからのメッセージ取得
 $json_string = file_get_contents('php://input');
 $jsonObj = json_decode($json_string);
-error_log("jsonObj: " . $jsonObj);
 
 $type = $jsonObj->{"events"}[0]->{"message"}->{"type"};
 error_log("type: " . $type);
