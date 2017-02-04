@@ -2,23 +2,20 @@
 $accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
 $accessToken = "YZHXIAokSgk1hwp9QddKxHkBrdNJzeQySK0jRGQLGBzKSnBJHjbJBe12VaVjd+g2JDSAoooU2xdeyolkhFQbsZ3+IcVvfFqRm4C+IGnBQ8jDh8A7ddSQXH+W/Y60qV4UWeXFCbky63uvvImWymBl9wdB04t89/1O/w1cDnyilFU=";
 
-
-error_log("log0");
-error_log("LINE_CHANNEL_ACCESS_TOKEN: " + $accessToken);
+error_log("LINE_CHANNEL_ACCESS_TOKEN: " . $accessToken);
 //ユーザーからのメッセージ取得
 $json_string = file_get_contents('php://input');
 $jsonObj = json_decode($json_string);
-error_log("log1¥r¥n");
-error_log("jsonObj: " + $jsonObj + "¥r¥n");
+error_log("jsonObj: " . $jsonObj);
 
 $type = $jsonObj->{"events"}[0]->{"message"}->{"type"};
-error_log("type: " + $type + "¥r¥n");
+error_log("type: " . $type);
 //メッセージ取得
 $text = $jsonObj->{"events"}[0]->{"message"}->{"text"};
-error_log("text: " + $text + "¥r¥n");
+error_log("text: " . $text);
 //ReplyToken取得
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
-error_log("replyToken: " + $replyToken + "¥r¥n");
+error_log("replyToken: " . $replyToken);
 
 //メッセージ以外のときは何も返さず終了
 if($type != "text"){
@@ -176,7 +173,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Authorization: Bearer ' . $accessToken
     ));
 $result = curl_exec($ch);
-error_log("result: " + $result + "¥r¥n");
+error_log("result: " . $result);
 
 
 curl_close($ch);
