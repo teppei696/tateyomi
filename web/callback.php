@@ -1,6 +1,5 @@
 <?php
 $accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
-$accessToken = "YZHXIAokSgk1hwp9QddKxHkBrdNJzeQySK0jRGQLGBzKSnBJHjbJBe12VaVjd+g2JDSAoooU2xdeyolkhFQbsZ3+IcVvfFqRm4C+IGnBQ8jDh8A7ddSQXH+W/Y60qV4UWeXFCbky63uvvImWymBl9wdB04t89/1O/w1cDnyilFU=";
 
 error_log("LINE_CHANNEL_ACCESS_TOKEN: " . $accessToken);
 //ユーザーからのメッセージ取得
