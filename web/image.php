@@ -50,7 +50,7 @@ imagettftext($img, $size, 0, $x, $y10, $black,'font1.ttc', $text10);
 # 赤い四角を描画
 // 四角形の線の色を指定（ここでは赤色）
 $red = imagecolorallocate($img, 255, 0, 0);
-imagesetthickness($im, $thickness);
+imagesetthickness($img, $thickness);
 // 画像リソースに四角形を描画
 imagerectangle($img,$point1,$point2,$point3,$point4,$red);
 
