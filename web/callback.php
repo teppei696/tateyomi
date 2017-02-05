@@ -40,50 +40,50 @@ if ($text == '天気を教えて？') {
 	          "type" => "uri",
 	          "linkUri" => "http://news.yahoo.co.jp/pickup/6100428",
 	          "area" => [
-	              "x" => 22,
-	              "y" => 70,
-	              "width" => 364,
-	              "height" => 40
+	              "x" => 36,
+	              "y" => 110,
+	              "width" => 600,
+	              "height" => 70
 	          ]
 	      ],
 	      [
 					"type" => "uri",
 					"linkUri" => "http://news.yahoo.co.jp/pickup/6224639",
 	          "area" => [
-	              "x" => 22,
-	              "y" => 110,
-	              "width" => 364,
-	              "height" => 40
+	              "x" => 36,
+	              "y" => 180,
+	              "width" => 600,
+	              "height" => 70
 	          ]
 	      ],
 				[
 						"type" => "uri",
 						"linkUri" => "http://news.yahoo.co.jp/pickup/6227663",
 						"area" => [
-								"x" => 22,
-								"y" => 150,
-								"width" => 364,
-								"height" => 40
+								"x" => 36,
+								"y" => 250,
+								"width" => 600,
+								"height" => 70
 						]
 				],
 				[
 						"type" => "uri",
 						"linkUri" => "http://news.yahoo.co.jp/pickup/6209649",
 						"area" => [
-								"x" => 22,
-								"y" => 190,
-								"width" => 364,
-								"height" => 40
+								"x" => 36,
+								"y" => 320,
+								"width" => 600,
+								"height" => 70
 						]
 				],
 				[
 						"type" => "uri",
 						"linkUri" => "http://news.yahoo.co.jp/pickup/6227462",
 						"area" => [
-								"x" => 22,
-								"y" => 230,
-								"width" => 364,
-								"height" => 40
+								"x" => 36,
+								"y" => 390,
+								"width" => 600,
+								"height" => 70
 						]
 				]
 	  ]
