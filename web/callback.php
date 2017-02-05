@@ -20,7 +20,8 @@ if($type != "text"){
 //返信データ作成
 if ($text == '天気を教えて？') {
 	// 画像情報
-	$image = "image.php";
+	$image = "image.php?" . date("YmdHis");
+
   //$response_format_text = [
   //  "type" => "image",
   //  "originalContentUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image,
