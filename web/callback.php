@@ -30,15 +30,15 @@ if ($text == '天気を教えて？') {
     "type" => "imagemap",
     "baseUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image,
 		"altText" => "縦読み天気予報",
-	  "baseSize" => {
+	  "baseSize" = {
 			"width" => 1040,
 			"height" => 846
 	  },
-		"actions" => [
+		"actions" = [
 	      {
 	          "type" => "uri",
 	          "linkUri" => "https://www.yahoo.co.jp/",
-	          "area" => {
+	          "area" = {
 	              "x" => 0,
 	              "y" => 0,
 	              "width" => 520,
@@ -48,7 +48,7 @@ if ($text == '天気を教えて？') {
 	      {
 					"type" => "uri",
 					"linkUri" => "https://www.google.co.jp/",
-	          "area" => {
+	          "area" = {
 	              "x" => 520,
 	              "y" => 0,
 	              "width" => 520,
