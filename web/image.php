@@ -34,7 +34,7 @@ if ($arr === NULL) {
 		error_log($title);
 	}
 }
-$titles = mb_str_split($title, 13);
+$titles = mb_str_split($title, 12);
 
 //$text1 = "交際費の５０％非課税効果";
 //$text2 = "ある？ＨＫＴ若田部遥卒業";
