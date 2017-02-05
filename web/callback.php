@@ -35,7 +35,7 @@ if ($text == '天気を教えて？') {
 			"height" => 846
 	  ],
 		"actions" = [
-	      {
+	      [
 	          "type" => "uri",
 	          "linkUri" => "https://www.yahoo.co.jp/",
 	          "area" = [
@@ -44,8 +44,8 @@ if ($text == '天気を教えて？') {
 	              "width" => 520,
 	              "height" => 846
 	          ]
-	      },
-	      {
+	      ],
+	      [
 					"type" => "uri",
 					"linkUri" => "https://www.google.co.jp/",
 	          "area" = [
@@ -54,7 +54,7 @@ if ($text == '天気を教えて？') {
 	              "width" => 520,
 	              "height" => 846
 	          ]
-	      }
+	      ]
 	  ]
   ];
 } else {
