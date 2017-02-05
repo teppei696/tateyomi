@@ -114,6 +114,30 @@ if ($text == '天気を教えて？') {
 							"text" => "2017/02/06の天気を見る"
 						]
 					]
+				],
+				[
+					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image,
+					"title" => "天気予報",
+					"text" => "火曜日の天気予報",
+					"actions" => [
+						[
+							"type" => "message",
+							"label" => "もっと詳細にみる",
+							"text" => "2017/02/07の天気を見る"
+						]
+					]
+				],
+				[
+					"thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image,
+					"title" => "天気予報",
+					"text" => "水曜日の天気予報",
+					"actions" => [
+						[
+							"type" => "message",
+							"label" => "もっと詳細にみる",
+							"text" => "2017/02/08の天気を見る"
+						]
+					]
 				]
 			]
 		]
