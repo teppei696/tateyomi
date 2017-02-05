@@ -34,15 +34,26 @@ if ($arr === NULL) {
 		error_log($title);
 	}
 }
+$titles = mb_str_split($title, 12);
 
-$text1 = "交際費の５０％非課税効果";
-$text2 = "ある？ＨＫＴ若田部遥卒業";
-$text3 = "し学業専念橋本マナミ変え";
-$text4 = "た２７歳の決意ポケＧＯ「";
-$text5 = "はやり過ぎ」の危機君の名";
-$text6 = "は。中国＆タイで新記録憧";
-$text7 = "れは俊輔１９歳にマンＵ注";
-$text8 = "目";
+//$text1 = "交際費の５０％非課税効果";
+//$text2 = "ある？ＨＫＴ若田部遥卒業";
+//$text3 = "し学業専念橋本マナミ変え";
+//$text4 = "た２７歳の決意ポケＧＯ「";
+//$text5 = "はやり過ぎ」の危機君の名";
+//$text6 = "は。中国＆タイで新記録憧";
+//$text7 = "れは俊輔１９歳にマンＵ注";
+//$text8 = "目";
+//$text9 = "";
+//$text10 = "";
+$text1 = $titles[0];
+$text2 = $titles[1];
+$text3 = $titles[2];
+$text4 = $titles[3];
+$text5 = $titles[4];
+$text6 = $titles[5];
+$text7 = $titles[6];
+$text8 = $titles[7];
 $text9 = "";
 $text10 = "";
 
@@ -76,5 +87,40 @@ error_log("new y: " . ImageSy($out));
 
 header('Content-Type: image/jpeg');
 imagejpeg($out);
+
+
+function mb_str_split($string,  $split_length = 1){
+    // 0以下が指定された場合Warningを発生させる
+    if($split_length <= 0){
+        trigger_error("mb_str_split(): The length of each segment must be greater than zero",
+                      E_USER_WARNING);
+    }
+
+    // 文字列を配列に分解
+    $aryString = preg_split("//u", $string, -1, PREG_SPLIT_NO_EMPTY);
+
+    // 文字数の指定がない場合、配列の要素数が0の場合はこのまま返す
+    if($split_length === 1 || count($aryString) === 0){
+        return $aryString;
+    }
+
+    // 引数の文字列毎に配列に詰め直す
+    $tmpVal = "";
+    foreach($aryString as $key => $value){
+        if(($key + 1) % $split_length !== 0){
+            $tmpVal = $tmpVal.$value;
+        }else{
+            $retAry[] = $tmpVal.$value;
+            $tmpVal = "";
+        }
+    }
+
+    // 余りの文字列があれば配列に足す
+    if($tmpVal !== ""){
+        $retAry[] = $tmpVal;
+    }
+
+    return $retAry;
+}
 
 ?>
