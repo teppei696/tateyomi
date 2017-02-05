@@ -37,7 +37,7 @@ if ($text == '天気を教えて？') {
 		"actions" => [
 	      [
 	          "type" => "uri",
-	          "linkUri" => "https://www.yahoo.co.jp/",
+	          "linkUri" => "http://www.yahoo.co.jp/",
 	          "area" => [
 	              "x" => 0,
 	              "y" => 0,
