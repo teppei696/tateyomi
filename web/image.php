@@ -35,7 +35,7 @@ $img = imagecreatefromjpeg($image);
 $text = mb_convert_encoding($text, 'UTF-8', 'auto');
 
 # 黒い文字を書き込む
-$black = imagecolorallocate($img, 0, 0, 0);
+$black = imagecolorallocate($img, 51, 51, 51);
 imagettftext($img, $size, 0, $x, $y1, $black,'font1.ttc', $text1);
 imagettftext($img, $size, 0, $x, $y2, $black,'font1.ttc', $text2);
 imagettftext($img, $size, 0, $x, $y3, $black,'font1.ttc', $text3);
