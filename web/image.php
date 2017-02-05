@@ -57,6 +57,12 @@ imagerectangle($img,$point1,$point2,$point3,$point4,$red);
 $out = ImageCreateTrueColor(1040, 846);
 ImageCopyResampled($out, $img, 0,0,0,0, 1040, 846, 640, 520);
 
+error_log("old x: " . ImageSx($img));
+error_log("old y: " . ImageSy($img));
+error_log("new x: " . ImageSx($out));
+error_log("new y: " . ImageSy($out));
+
+
 header('Content-Type: image/jpeg');
 imagejpeg($out);
 
