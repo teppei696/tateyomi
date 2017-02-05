@@ -54,12 +54,8 @@ imagesetthickness($img, $thickness);
 // 画像リソースに四角形を描画
 imagerectangle($img,$point1,$point2,$point3,$point4,$red);
 
-$width = 640;
-$height = 520;
-
-//$out = ImageCreateTrueColor(1040, 846);
-ImageCopyResampled($out, $img,
-    0,0,0,0, 1040, 846, $width, $height);
+$out = ImageCreateTrueColor(1040, 846);
+ImageCopyResampled($out, $img, 0,0,0,0, 1040, 846, 640, 520);
 
 header('Content-Type: image/jpeg');
 imagejpeg($out);
