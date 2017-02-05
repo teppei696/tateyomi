@@ -18,16 +18,16 @@ $y7 = 340;
 $y8 = 380;
 $y9 = 420;
 $y10 = 460;
-$text1 = $_GET['text1'];
-$text2 = $_GET['text2'];
-$text3 = $_GET['text3'];
-$text4 = $_GET['text4'];
-$text5 = $_GET['text5'];
-$text6 = $_GET['text6'];
-$text7 = $_GET['text7'];
-$text8 = $_GET['text8'];
-$text9 = $_GET['text9'];
-$text10 = $_GET['text10'];
+$text1 = "文字列を書き込みます１。";
+$text2 = "文字列を書き込みます２。";
+$text3 = "文字列を書き込みます３。";
+$text4 = "文字列を書き込みます４。";
+$text5 = "文字列を書き込みます５。";
+$text6 = "文字列を書き込みます６。";
+$text7 = "文字列を書き込みます７。";
+$text8 = "文字列を書き込みます８。";
+$text9 = "文字列を書き込みます９。";
+$text10 = "文字列を書き込みます１０。";
 
 $img = imagecreatefromjpeg($image);
 
@@ -53,8 +53,6 @@ $red = imagecolorallocate($img, 255, 0, 0);
 imagesetthickness($img, $thickness);
 // 画像リソースに四角形を描画
 imagerectangle($img,$point1,$point2,$point3,$point4,$red);
-
-
 
 header('Content-Type: image/jpeg');
 imagejpeg($img);

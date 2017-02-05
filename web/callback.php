@@ -20,21 +20,42 @@ if($type != "text"){
 //返信データ作成
 if ($text == '天気を教えて？') {
 	// 画像情報
-	$url1 = "image.php?";
-	$url2 = "text1=" . urlencode("文字列を書き込みます１。");
-	$url3 = "&text2=" . urlencode("文字列を書き込みます１。");
-	$url4 = "&text3=" . urlencode("文字列を書き込みます１。");
-	$url5 = "&text4=" . urlencode("文字列を書き込みます１。");
-	$url6 = "&text5=" . urlencode("文字列を書き込みます１。");
-	$url7 = "&text6=" . urlencode("文字列を書き込みます１。");
-	$url8 = "&text7=" . urlencode("文字列を書き込みます１。");
-	$url9 = "&text8=" . urlencode("文字列を書き込みます１。");
-
-	$image = $url1 . $url2 . $url3 . $url4 . $url5 . $url6 . $url7 . $url8 . $url9;
-  $response_format_text = [
-    "type" => "image",
-    "originalContentUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image,
-		"previewImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image
+	$image = "image.php";
+  //$response_format_text = [
+  //  "type" => "image",
+  //  "originalContentUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image,
+	//	"previewImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image
+  //];
+	$response_format_text = [
+    "type" => "imagemap",
+    "baseUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image,
+		"altText": "縦読み天気予報",
+	  "baseSize": {
+			"width": 1040,
+			"height": 846
+	  },
+		"actions": [
+	      {
+	          "type": "uri",
+	          "linkUri": "https://www.yahoo.co.jp/",
+	          "area": {
+	              "x": 0,
+	              "y": 0,
+	              "width": 520,
+	              "height": 846
+	          }
+	      },
+	      {
+					"type": "uri",
+					"linkUri": "https://www.google.co.jp/",
+	          "area": {
+	              "x": 520,
+	              "y": 0,
+	              "width": 520,
+	              "height": 846
+	          }
+	      }
+	  ]
   ];
 } else {
 	exit;
