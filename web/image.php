@@ -57,9 +57,9 @@ imagerectangle($img,$point1,$point2,$point3,$point4,$red);
 $width = ImageSx($img);
 $height = ImageSy($img);
 
-$out = ImageCreateTrueColor($width * 2, $height * 2);
+$out = ImageCreateTrueColor(1040, 846);
 ImageCopyResampled($out, $img,
-    0,0,0,0, $width * 2, $height * 2, $width, $height);
+    0,0,0,0, 1040, 846, $width, $height);
 
 header('Content-Type: image/jpeg');
 imagejpeg($out);
