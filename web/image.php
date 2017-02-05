@@ -33,7 +33,6 @@ if ($arr === NULL) {
 		$titles[] = $arr["articles"][$i]["title"];
 	}
 }
-error_log(var_dump($titles));
 
 $text1 = "交際費の５０％非課税効果";
 $text2 = "ある？ＨＫＴ若田部遥卒業";
