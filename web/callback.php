@@ -37,7 +37,7 @@ if ($text == '天気を教えて？') {
 		"actions" => [
 	      [
 	          "type" => "uri",
-	          "linkUri" => "http://www.yahoo.co.jp/",
+	          "linkUri" => "http://news.yahoo.co.jp/pickup/6100428",
 	          "area" => [
 	              "x" => 22,
 	              "y" => 70,
@@ -47,7 +47,7 @@ if ($text == '天気を教えて？') {
 	      ],
 	      [
 					"type" => "uri",
-					"linkUri" => "https://www.google.co.jp/",
+					"linkUri" => "http://news.yahoo.co.jp/pickup/6224639",
 	          "area" => [
 	              "x" => 22,
 	              "y" => 110,
@@ -57,7 +57,7 @@ if ($text == '天気を教えて？') {
 	      ],
 				[
 						"type" => "uri",
-						"linkUri" => "http://www.yahoo.co.jp/",
+						"linkUri" => "http://news.yahoo.co.jp/pickup/6227663",
 						"area" => [
 								"x" => 22,
 								"y" => 150,
@@ -67,7 +67,7 @@ if ($text == '天気を教えて？') {
 				],
 				[
 						"type" => "uri",
-						"linkUri" => "http://www.yahoo.co.jp/",
+						"linkUri" => "http://news.yahoo.co.jp/pickup/6209649",
 						"area" => [
 								"x" => 22,
 								"y" => 190,
@@ -77,30 +77,10 @@ if ($text == '天気を教えて？') {
 				],
 				[
 						"type" => "uri",
-						"linkUri" => "http://www.yahoo.co.jp/",
+						"linkUri" => "http://news.yahoo.co.jp/pickup/6227462",
 						"area" => [
 								"x" => 22,
 								"y" => 230,
-								"width" => 364,
-								"height" => 40
-						]
-				],
-				[
-						"type" => "uri",
-						"linkUri" => "http://www.yahoo.co.jp/",
-						"area" => [
-								"x" => 22,
-								"y" => 270,
-								"width" => 364,
-								"height" => 40
-						]
-				],
-				[
-						"type" => "uri",
-						"linkUri" => "http://www.yahoo.co.jp/",
-						"area" => [
-								"x" => 22,
-								"y" => 310,
 								"width" => 364,
 								"height" => 40
 						]
