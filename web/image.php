@@ -18,6 +18,23 @@ $y7 = 340;
 $y8 = 380;
 $y9 = 420;
 $y10 = 460;
+
+$url = "https://" . $_SERVER['SERVER_NAME'] . "/hare.json";
+$json = file_get_contents($url);
+$json = mb_convert_encoding($json, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
+$arr = json_decode($json,true);
+
+if ($arr === NULL) {
+	return;
+} else {
+	$json_count = count($arr["articles"]);
+	$titles = array();
+	for ($i = 0; $i < $json_count; $i++) {
+		$titles[] = $arr["articles"][$i]["title"];
+	}
+}
+error_log(var_dump($titles));
+
 $text1 = "交際費の５０％非課税効果";
 $text2 = "ある？ＨＫＴ若田部遥卒業";
 $text3 = "し学業専念橋本マナミ変え";
@@ -30,11 +47,7 @@ $text9 = "";
 $text10 = "";
 
 $img = imagecreatefromjpeg($image);
-
-# 必要に応じてUTF8へ変換(環境依存)
 $text = mb_convert_encoding($text, 'UTF-8', 'auto');
-
-# 黒い文字を書き込む
 $black = imagecolorallocate($img, 51, 51, 51);
 imagettftext($img, $size, 0, $x, $y1, $black,'font1.ttc', $text1);
 imagettftext($img, $size, 0, $x, $y2, $black,'font1.ttc', $text2);
@@ -47,11 +60,9 @@ imagettftext($img, $size, 0, $x, $y8, $black,'font1.ttc', $text8);
 imagettftext($img, $size, 0, $x, $y9, $black,'font1.ttc', $text9);
 imagettftext($img, $size, 0, $x, $y10, $black,'font1.ttc', $text10);
 
-# 赤い四角を描画
 // 四角形の線の色を指定（ここでは赤色）
 $red = imagecolorallocate($img, 255, 0, 0);
 imagesetthickness($img, $thickness);
-// 画像リソースに四角形を描画
 imagerectangle($img,$point1,$point2,$point3,$point4,$red);
 
 $out = ImageCreateTrueColor(1040, 846);
