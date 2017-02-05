@@ -88,6 +88,50 @@ if ($text == '天気を教えて？') {
 				]
 	  ]
   ];
+} elseif ($text == '今週の天気を教えて？') {
+	// 画像情報
+	$image = "image.php?" . date("YmdHis");
+
+  //$response_format_text = [
+  //  "type" => "image",
+  //  "originalContentUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image,
+	//	"previewImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image
+  //];
+	$response_format_text = [
+    "type" => "carousel",
+		"columns" => [
+	      [
+	          "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image,
+	          "title" => "天気予報",
+						"text" => "月曜日の天気予報",
+						"actions" => [
+							"type" => "message",
+							"label" => "もっと詳細にみる",
+							"text" => "2017/02/06の天気を見る"
+						]
+	      ],
+				[
+	          "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image,
+	          "title" => "天気予報",
+						"text" => "火曜日の天気予報",
+						"actions" => [
+							"type" => "message",
+							"label" => "もっと詳細にみる",
+							"text" => "2017/02/07の天気を見る"
+						]
+	      ],
+				[
+	          "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image,
+	          "title" => "天気予報",
+						"text" => "水曜日の天気予報",
+						"actions" => [
+							"type" => "message",
+							"label" => "もっと詳細にみる",
+							"text" => "2017/02/08の天気を見る"
+						]
+	      ]
+	  ]
+  ];
 } else {
 	exit;
 }
