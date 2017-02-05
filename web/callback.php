@@ -29,30 +29,30 @@ if ($text == '天気を教えて？') {
 	$response_format_text = [
     "type" => "imagemap",
     "baseUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image,
-		"altText": "縦読み天気予報",
-	  "baseSize": {
-			"width": 1040,
-			"height": 846
+		"altText" => "縦読み天気予報",
+	  "baseSize" => {
+			"width" => 1040,
+			"height" => 846
 	  },
-		"actions": [
+		"actions" => [
 	      {
-	          "type": "uri",
-	          "linkUri": "https://www.yahoo.co.jp/",
-	          "area": {
-	              "x": 0,
-	              "y": 0,
-	              "width": 520,
-	              "height": 846
+	          "type" => "uri",
+	          "linkUri" => "https://www.yahoo.co.jp/",
+	          "area" => {
+	              "x" => 0,
+	              "y" => 0,
+	              "width" => 520,
+	              "height" => 846
 	          }
 	      },
 	      {
-					"type": "uri",
-					"linkUri": "https://www.google.co.jp/",
-	          "area": {
-	              "x": 520,
-	              "y": 0,
-	              "width": 520,
-	              "height": 846
+					"type" => "uri",
+					"linkUri" => "https://www.google.co.jp/",
+	          "area" => {
+	              "x" => 520,
+	              "y" => 0,
+	              "width" => 520,
+	              "height" => 846
 	          }
 	      }
 	  ]
