@@ -99,7 +99,7 @@ if ($text == '天気を教えて？') {
   //];
 	$response_format_text = [
 		"type" => "template",
-		"altText" => "",
+		"altText" => "縦読み天気予報",
 		"template" => [
 			"type" => "carousel",
 			"columns" => [
