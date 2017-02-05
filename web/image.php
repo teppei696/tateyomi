@@ -31,8 +31,10 @@ if ($arr === NULL) {
 	$titles = array();
 	for ($i = 0; $i < $json_count; $i++) {
 		$titles[] = $arr["articles"][$i]["title"];
+		error_log($titles[$i]);
 	}
 }
+
 
 $text1 = "交際費の５０％非課税効果";
 $text2 = "ある？ＨＫＴ若田部遥卒業";
