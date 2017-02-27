@@ -30,6 +30,24 @@ if ($text == '天気を教えて'
   //  "originalContentUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image,
 	//	"previewImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image
   //];
+$url = "https://" . $_SERVER['SERVER_NAME'] . "/hare.json";
+$json = file_get_contents($url);
+$json = mb_convert_encoding($json, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
+$arr = json_decode($json,true);
+
+$title = [];
+if ($arr === NULL) {
+	return;
+} else {
+	$json_count = count($arr["articles"]);
+	for ($i = 0; $i < $json_count; $i++) {
+		$title[] = $arr["articles"][$i]["url"];
+	}
+}
+
+
+
+
 	$response_format_text = [
     "type" => "imagemap",
     "baseUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/" . $image,
@@ -41,7 +59,7 @@ if ($text == '天気を教えて'
 		"actions" => [
 	      [
 	          "type" => "uri",
-	          "linkUri" => "http://news.yahoo.co.jp/pickup/6100428",
+	          "linkUri" => $title[0],
 	          "area" => [
 	              "x" => 36,
 	              "y" => 110,
@@ -51,7 +69,7 @@ if ($text == '天気を教えて'
 	      ],
 	      [
 					"type" => "uri",
-					"linkUri" => "http://news.yahoo.co.jp/pickup/6224639",
+					"linkUri" => $title[1],
 	          "area" => [
 	              "x" => 36,
 	              "y" => 180,
@@ -61,7 +79,7 @@ if ($text == '天気を教えて'
 	      ],
 				[
 						"type" => "uri",
-						"linkUri" => "http://news.yahoo.co.jp/pickup/6227663",
+						"linkUri" => $title[2],
 						"area" => [
 								"x" => 36,
 								"y" => 250,
@@ -71,7 +89,7 @@ if ($text == '天気を教えて'
 				],
 				[
 						"type" => "uri",
-						"linkUri" => "http://news.yahoo.co.jp/pickup/6209649",
+						"linkUri" => $title[3],
 						"area" => [
 								"x" => 36,
 								"y" => 320,
@@ -81,7 +99,7 @@ if ($text == '天気を教えて'
 				],
 				[
 						"type" => "uri",
-						"linkUri" => "http://news.yahoo.co.jp/pickup/6227462",
+						"linkUri" => $title[4],
 						"area" => [
 								"x" => 36,
 								"y" => 390,
